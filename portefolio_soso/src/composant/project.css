@@ -1,0 +1,288 @@
+.project-container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6rem 1.5rem;
+	background:
+		radial-gradient(circle at top, rgba(222, 58, 237, 0.28), transparent 34%),
+		radial-gradient(circle at bottom right, rgba(6, 182, 212, 0.18), transparent 28%),
+		linear-gradient(180deg, #1a0925 0%, #1d091f 42%, #070407 100%);
+	color: #f5f7ff;
+	overflow: hidden;
+}
+
+.project-shell {
+	width: min(1100px, 100%);
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	perspective: 1800px;
+}
+
+.project-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.project-kicker {
+	margin: 0 0 0.35rem;
+	text-transform: uppercase;
+	letter-spacing: 0.24em;
+	font-size: 0.75rem;
+	color: rgba(197, 210, 254, 0.75);
+}
+
+.project-title {
+	margin: 0;
+	font-size: clamp(2.2rem, 4vw, 4.5rem);
+	line-height: 0.95;
+}
+
+.project-intro {
+	margin: 0;
+	max-width: 38rem;
+	color: rgba(226, 232, 240, 0.78);
+	font-size: 1rem;
+}
+
+.project-controls {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.carousel-button {
+	width: 3rem;
+	height: 3rem;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.08);
+	color: #fff;
+	font-size: 1.7rem;
+	cursor: pointer;
+	backdrop-filter: blur(14px);
+	transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.carousel-button:hover {
+	transform: translateY(-2px);
+	background: rgba(255, 255, 255, 0.14);
+	border-color: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-viewport {
+	position: relative;
+	min-height: 34rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.carousel-viewport::before {
+	content: "";
+	position: absolute;
+	left: -12%;
+	top: 18%;
+	width: 28rem;
+	height: 28rem;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(124, 58, 237, 0.22), transparent 70%);
+	filter: blur(44px);
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+.carousel-viewport::after {
+	content: "";
+	position: absolute;
+	right: -10%;
+	bottom: 8%;
+	width: 24rem;
+	height: 24rem;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(6, 182, 212, 0.18), transparent 72%);
+	filter: blur(50px);
+	opacity: 0.85;
+	pointer-events: none;
+}
+
+.carousel-track {
+	position: relative;
+	width: 20rem;
+	height: 26rem;
+	transform-style: preserve-3d;
+	transition: transform 800ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.project-card {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1.25rem;
+	padding: 1.5rem;
+	border-radius: 28px;
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	background:
+		linear-gradient(145deg, rgba(17, 24, 39, 0.92), rgba(10, 14, 30, 0.82)),
+		radial-gradient(circle at top right, color-mix(in srgb, var(--card-accent) 38%, transparent), transparent 45%);
+	box-shadow:
+		0 30px 80px rgba(0, 0, 0, 0.45),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(14px);
+	overflow: hidden;
+}
+
+.project-card.is-active {
+	box-shadow:
+		0 40px 100px rgba(0, 0, 0, 0.55),
+		0 0 0 1px rgba(255, 255, 255, 0.18),
+		inset 0 1px 0 rgba(255, 255, 255, 0.14);
+	filter: saturate(1.05);
+	z-index: 2;
+}
+
+.project-card.is-back {
+	opacity: 0.58;
+	filter: blur(2.2px) brightness(0.72) saturate(0.82);
+	backdrop-filter: blur(22px);
+	box-shadow:
+		0 18px 44px rgba(0, 0, 0, 0.28),
+		inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.project-card::after {
+	content: "";
+	position: absolute;
+	inset: auto -20% -35% auto;
+	width: 12rem;
+	height: 12rem;
+	border-radius: 50%;
+	background: radial-gradient(circle, color-mix(in srgb, var(--card-accent) 60%, white), transparent 68%);
+	opacity: 0.28;
+	filter: blur(6px);
+	pointer-events: none;
+}
+
+.project-card-top {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.project-index {
+	width: fit-content;
+	padding: 0.35rem 0.7rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.1);
+	color: rgba(255, 255, 255, 0.88);
+	font-size: 0.78rem;
+	letter-spacing: 0.18em;
+}
+
+.project-card h2 {
+	margin: 0;
+	font-size: 1.55rem;
+	line-height: 1.05;
+}
+
+.project-card p {
+	margin: 0;
+	color: rgba(226, 232, 240, 0.82);
+	line-height: 1.45;
+}
+
+.project-photo-frame {
+	width: 100%;
+	height: 7rem;
+	border-radius: 20px;
+	border: 1px dashed rgba(255, 255, 255, 0.24);
+	background:
+		radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 60%),
+		linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	backdrop-filter: blur(10px);
+}
+
+.project-photo-placeholder {
+	font-size: 0.82rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.72);
+}
+
+.project-tags {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.project-tag {
+	padding: 0.4rem 0.75rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.1);
+	color: #f8fafc;
+	font-size: 0.82rem;
+}
+
+.project-dots {
+	display: flex;
+	justify-content: center;
+	gap: 0.7rem;
+}
+
+.project-dot {
+	width: 0.72rem;
+	height: 0.72rem;
+	border: none;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.28);
+	cursor: pointer;
+	transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.project-dot:hover {
+	transform: scale(1.18);
+}
+
+.project-dot.is-active {
+	background: #fff;
+	box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+	.project-container {
+		padding: 5rem 1rem 4rem;
+	}
+
+	.carousel-viewport {
+		min-height: 29rem;
+	}
+
+	.carousel-track {
+		width: 17rem;
+		height: 25rem;
+	}
+
+	.project-card {
+		padding: 1.25rem;
+		border-radius: 24px;
+	}
+
+	.project-photo-frame {
+		height: 6rem;
+		border-radius: 18px;
+	}
+}

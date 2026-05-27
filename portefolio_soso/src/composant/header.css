@@ -1,0 +1,45 @@
+header{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    padding: 2rem 0;
+    justify-content: space-around;
+    max-height: 10%; 
+    position: fixed;
+    z-index: 1000;
+}
+.header-transparent{
+ background-color: transparent;
+}
+.header-couleur{
+    background-color:  rgba(136, 73, 187, 0.616);
+
+}
+
+.name{
+    padding: 1px;
+}
+.title{
+    padding-top: 1%;
+}
+.header-text{
+    width: 50%;
+    display: block
+}
+.ul-header{
+display: flex;
+justify-content: space-between;
+padding: 3px;
+}
+.nav-container{
+    width: 40%;
+}
+
+li {
+ list-style-type: none;   
+}
+.nav-container img{
+    width: 45%;
+    border-radius: 50%;
+}
