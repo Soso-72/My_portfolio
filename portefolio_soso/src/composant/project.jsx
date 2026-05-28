@@ -22,7 +22,7 @@ const projects = [
     },
     {
         title: "Yowl",
-        description: "MVP d'un reseau social type pinterest",
+        description: "un reseau social type pinterest",
         tech: ["figma", "marketing", "design"],
         accent: "#22c55e",
         image: yowlImg,
