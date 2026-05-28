@@ -14,17 +14,12 @@ export function AboutMe() {
                     <div className="about-content about-content--single">
                         <div className="about-text about-text--large">
                         <h1>À propos de moi</h1>
-                        <p className="about-tag">Développeuse web • Étudiante Bachelor à Epitech • Recherche de stage</p>
+                        <p className="about-tag">Développeuse web • Étudiante Bachelor à Epitech</p>
                             <span className="accent-line" aria-hidden="true" />
                             <p>
                                 Bonjour 👋 Je m'appelle Soraya. Passionnée par le développement web, j'aime transformer des idées
                                 en interfaces fonctionnelles et esthétiques. Je privilégie la clarté, l'accessibilité et une expérience
                                 visuelle soignée. Mon travail se concentre sur des interfaces performantes et agréables à utiliser.
-                            </p>
-
-                            <p>
-                                Je suis curieuse, organisée et j'apprends rapidement. J'aime collaborer en équipe et je recherche
-                                un stage pour continuer à progresser sur des projets concrets et impactants.
                             </p>
 
                         </div>
