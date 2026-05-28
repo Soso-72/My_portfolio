@@ -1,20 +1,40 @@
-import "./AboutMe.css"
+import "./AboutMe.css";
 
-export function AboutMe(){
+export function AboutMe() {
     return (
+
         <>
-        <div className="about-me-gradients-up">
-        </div>
-            <div className="about-me-container" id="AboutMe">
-                <div className="about-me-box">
-                <h1 className="about-me-title">A propos de moi</h1>
-                    <p className="about-me-description">
-                    aboutme
-                    </p>
+        <div className="about-me-gradients-up"></div>
+        <section className="about-section" id="AboutMe">
+            <div className="about-me-container">
+                <div className="about-inner">
+                    <header className="about-header">
+                    </header>
+
+                    <div className="about-content about-content--single">
+                        <div className="about-text about-text--large">
+                        <h1>À propos de moi</h1>
+                        <p className="about-tag">Développeuse web • Étudiante Bachelor à Epitech • Recherche de stage</p>
+                            <span className="accent-line" aria-hidden="true" />
+                            <p>
+                                Bonjour 👋 Je m'appelle Soraya. Passionnée par le développement web, j'aime transformer des idées
+                                en interfaces fonctionnelles et esthétiques. Je privilégie la clarté, l'accessibilité et une expérience
+                                visuelle soignée. Mon travail se concentre sur des interfaces performantes et agréables à utiliser.
+                            </p>
+
+                            <p>
+                                Je suis curieuse, organisée et j'apprends rapidement. J'aime collaborer en équipe et je recherche
+                                un stage pour continuer à progresser sur des projets concrets et impactants.
+                            </p>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="about-me-gradients-down">
-            </div>
+        </section>
+         <div className="about-me-gradients-down"></div>
         </>
-    )
+    );
 }
+
+export default AboutMe;

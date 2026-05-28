@@ -10,36 +10,91 @@ header{
     z-index: 1000;
 }
 .header-transparent{
- background-color: transparent;
+    background-color: transparent;
 }
 .header-couleur{
-    background-color:  rgba(136, 73, 187, 0.616);
-
+    background: linear-gradient(90deg, rgba(91, 27, 110, 0.95), rgba(77, 2, 46, 0.9));
+    box-shadow: 0 8px 30px rgba(3,6,20,0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background 280ms ease, box-shadow 280ms ease;
 }
 
 .name{
     padding: 1px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #f8f9ff;
 }
 .title{
     padding-top: 1%;
 }
 .header-text{
     width: 50%;
-    display: block
+    display: block;
 }
 .ul-header{
-display: flex;
-justify-content: space-between;
-padding: 3px;
+    display: flex;
+    gap: 1.1rem;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 .nav-container{
     width: 40%;
 }
 
-li {
- list-style-type: none;   
+li { list-style-type: none; }
+
+.ul-header a{
+    display: inline-block;
+    padding: 0.55rem 0.9rem;
+    color: #f8f9ff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border-radius: 999px;
+    position: relative;
+    transition: transform 180ms ease, background 180ms ease, color 180ms ease;
 }
-.nav-container img{
-    width: 45%;
-    border-radius: 50%;
+
+.ul-header a::after{
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 6px;
+    height: 3px;
+    background: linear-gradient(90deg,#7c3aed,#06b6d4);
+    border-radius: 999px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 200ms;
+    opacity: 0;
+}
+
+.ul-header a:hover{
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.03);
+}
+
+.ul-header a:hover::after,
+.ul-header a:focus::after{
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/* Active section visual (if you add .active via JS) */
+.ul-header a.active{
+    background: linear-gradient(90deg, rgba(124,58,237,0.18), rgba(6,182,212,0.12));
+}
+
+@media (max-width: 780px){
+    header{ padding: 1rem 0; }
+    .header-text{ width: auto; }
+    .nav-container{ width: auto; }
+    .ul-header{ gap: 0.6rem; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
+    .ul-header a{ padding: 0.45rem 0.7rem; font-size: 0.82rem; }
 }

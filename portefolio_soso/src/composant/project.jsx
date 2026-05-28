@@ -1,36 +1,38 @@
 import { useState } from "react";
 import "./project.css";
+import etodoImg from "../assets/etodo.png";
+import yowlImg from "../assets/yowl.png";
+import elizaImg from "../assets/chatbot.png";
+import jobAgregatorImg from "../assets/jobaggreator.png";
 
 const projects = [
-    {
-        title: "Portfolio immersif",
-        description: "Une vitrine personnelle pensée pour la navigation fluide et l'effet waouh.",
-        tech: ["React", "CSS 3D", "Responsive"],
-        accent: "#7c3aed",
-    },
     {
         title: "Etodo app",
         description: "Une application de gestion de tâches stockée dans une base de données.",
         tech: ["UI", "base de données"],
         accent: "#06b6d4",
+        image: etodoImg,
     },
     {
         title: "Eliza",
-        description: "Chatbot en bourse.",
+        description: "Chatbot d'information boursière. ",
         tech: ["IA", "marketing"],
         accent: "#f97316",
+        image: elizaImg,
     },
     {
         title: "Yowl",
-        description: "un site web qui ",
+        description: "MVP d'un reseau social type pinterest",
         tech: ["figma", "marketing", "design"],
         accent: "#22c55e",
+        image: yowlImg,
     },
     {
-        title: "JobAgregator",
-        description: "Un agrégateur d'offres d'emploi pour les developpeur avec une interface épurée et des filtres intuitifs.",
+        title: "NovaJob",
+        description: "Un agrégateur d'offres d'emploi pour les dev avec des filtres intuitifs.",
         tech: ["Sécurité", "Design", "IA"],
         accent: "#ec4899",
+        image: jobAgregatorImg,
     },
 ];
 
@@ -81,7 +83,9 @@ export function Project() {
                                     <h2>{project.title}</h2>
                                     <p>{project.description}</p>
                                     <div className="project-photo-frame" aria-label={`Aperçu photo du projet ${project.title}`}>
-                                        <span className="project-photo-placeholder">Photo du projet</span>
+                                        <span className="project-photo-placeholder">
+                                            <img src={project.image} alt={project.title} />
+                                        </span>
                                     </div>
                                 </div>
 
