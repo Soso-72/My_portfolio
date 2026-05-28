@@ -46,7 +46,6 @@ export function Skills() {
                 <div className="skills-grid">
                     <section className="skills-panel">
                         <div className="panel-heading">
-                            <h3>Hard Skills</h3>
                             <span>Technologies que j’utilise</span>
                         </div>
 
@@ -66,7 +65,6 @@ export function Skills() {
 
                     <section className="skills-panel soft-panel">
                         <div className="panel-heading">
-                            <h3>Soft Skills</h3>
                             <span>Ce que j’apporte à une équipe</span>
                         </div>
 
