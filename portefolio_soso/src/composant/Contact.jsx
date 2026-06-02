@@ -2,6 +2,7 @@ import "./Contact.css";
 
 export function Contact() {
     const email = "soraya.catherine@epitech.eu";
+    // const phone = "+262 06 92 22 41 60";
     const github = "https://github.com/Soso-72";
     const linkedin = "https://www.linkedin.com/in/soraya-catherine-27b7a1335";
 
@@ -28,10 +29,10 @@ export function Contact() {
                                 <span className="contact-value">{email}</span>
                             </a>
 
-                            <a className="contact-method" href={`tel:${phone.replace(/\s/g, "")}`}>
+                            {/* <a className="contact-method" href={`tel:${phone.replace(/\s/g, "")}`}>
                                 <span className="contact-label">Téléphone</span>
                                 <span className="contact-value">{phone}</span>
-                            </a>
+                            </a> */}
                         </div>
                     </article>
 
