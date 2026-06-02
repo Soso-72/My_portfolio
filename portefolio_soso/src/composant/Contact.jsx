@@ -2,7 +2,6 @@ import "./Contact.css";
 
 export function Contact() {
     const email = "soraya.catherine@epitech.eu";
-    const phone = "+262 06 92 22 41 60";
     const github = "https://github.com/Soso-72";
     const linkedin = "https://www.linkedin.com/in/soraya-catherine-27b7a1335";
 
